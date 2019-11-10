@@ -35,8 +35,9 @@ angularjs/1.2.15/angular.min.js"></script>
 function SampleController($scope) {
 $scope.click = function() {
 if ($scope.text == 'hacking') {
+  window.open("index3.html","good","");
 $scope.message = '正解';
-} else {
+} else {window.open("nogood01.html","good","");
 $scope.message = '不正解';
 }
 };
@@ -45,13 +46,13 @@ $scope.message = '不正解';
 </head>
 <body>
 <!--<h2>問題 1</h2>-->
-<p>hackingと入力</p>
+<h3>hackingと入力</h3>
 <div ng-controller="SampleController">
 <input type="text" ng-model="text" />
 <br>
 <button ng-click="click()" class="btn-real">
   <i class="fas fa-broadcast-tower"></i></button>
-<p>{{message}}</p>
+<p></p>
 
 
 
