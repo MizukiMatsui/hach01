@@ -24,17 +24,41 @@
 
         </div> -->
 
-        <h2>
-        もんだいもんだいもんだいもんだい
-        </h2>
-        <p>
-        もんだいもんだいもんだいもんだいもんだいもんだい<br>
-        もんだいもんだいもんだいもんだいもんだい<br>
-        </p>
-        <input><br>
-        <a href="#" class="btn-real">
-          <i class="fas fa-broadcast-tower"></i>
-        </a>
+
+
+
+<html lang="ja" ng-app>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/
+angularjs/1.2.15/angular.min.js"></script>
+<script>
+function SampleController($scope) {
+$scope.click = function() {
+if ($scope.text == 'hacking') {
+$scope.message = '正解';
+} else {
+$scope.message = '不正解';
+}
+};
+}
+</script>
+</head>
+<body>
+<!--<h2>問題 1</h2>-->
+<p>hackingと入力</p>
+<div ng-controller="SampleController">
+<input type="text" ng-model="text" />
+<br>
+<button ng-click="click()" class="btn-real">
+  <i class="fas fa-broadcast-tower"></i></button>
+<p>{{message}}</p>
+
+
+
+</div>
+</body>
+</html>
+
     </div>
 
   </body>
