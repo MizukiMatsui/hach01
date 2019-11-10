@@ -5,7 +5,19 @@
     <title>PORTAL</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script>
+    function SampleController($scope) {
+    $scope.click = function() {
+    if ($scope.text == 'hacking') {
+      window.open("index3.html");
+    } else {window.open("nogood01.html");
+    }
+    };
+    }
+    </script>
   </head>
+<html lang="ja" ng-app>
   <body>
     <!-- ここからHTMLを書き始めてください -->
     <header>
@@ -24,43 +36,15 @@
 
         </div> -->
 
-
-
-
-<html lang="ja" ng-app>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/
-angularjs/1.2.15/angular.min.js"></script>
-<script>
-function SampleController($scope) {
-$scope.click = function() {
-if ($scope.text == 'hacking') {
-  window.open("index3.html","good","");
-$scope.message = '正解';
-} else {window.open("nogood01.html","good","");
-$scope.message = '不正解';
-}
-};
-}
-</script>
-</head>
-<body>
 <!--<h2>問題 1</h2>-->
 <h3>hackingと入力</h3>
 <div ng-controller="SampleController">
-<input type="text" ng-model="text" />
+<input type="text" id="scope" ng-model="text" />
 <br>
 <button ng-click="click()" class="btn-real">
   <i class="fas fa-broadcast-tower"></i></button>
 <p></p>
 
-
-
 </div>
 </body>
-</html>
-
-    </div>
-
-  </body>
 </html>
